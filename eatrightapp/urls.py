@@ -10,6 +10,7 @@ from django.conf.urls.static import static
 
 
 from django.urls import path
+import catalog.views
 from catalog import views
 # from . import views
 from django.urls import re_path as url
@@ -20,9 +21,9 @@ urlpatterns = [
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-urlpatterns += [
-    path('catalog/', include('catalog.urls')),
-]
+# urlpatterns += [
+#     path('catalog/', include('catalog.urls')),
+# ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
@@ -31,9 +32,9 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('',
-         views.index,
-         name='index'),
+    # path('',
+    #      views.index,
+    #      name='index'),
 
     path('consumedfood/',
          views.ConsumedFoodListView.as_view(),
