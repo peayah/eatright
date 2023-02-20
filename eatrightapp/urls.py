@@ -11,15 +11,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('foodlist/', include('foodlist.local_urls')),
     path('', RedirectView.as_view(url='foodlist/', permanent=True)),
     path('accounts/', include('django.contrib.auth.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-urlpatterns += [
-    path('', include('foodlist.local_urls')),
-]
-
-
