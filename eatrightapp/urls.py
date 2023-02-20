@@ -7,7 +7,7 @@ from django.views.generic import RedirectView
 # files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
-from catalog import urls
+# from catalog import urls
 
 
 urlpatterns = [
