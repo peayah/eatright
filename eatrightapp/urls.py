@@ -7,6 +7,7 @@ from django.views.generic import RedirectView
 # files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
+import catalog.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,7 +15,6 @@ urlpatterns = [
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [
-    # path('catalog/', include('catalog.urls')),
     path('catalog/', include('catalog.urls')),
 ]
 
