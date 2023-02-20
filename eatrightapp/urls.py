@@ -1,8 +1,7 @@
 # cohorts URL Configuration
 
 from django.contrib import admin
-from django.urls import path
-from django.urls import include
+from django.urls import path, include
 from django.views.generic import RedirectView
 # Use static() to add URL mapping to serve static
 # files during development (only)
@@ -16,7 +15,7 @@ urlpatterns = [
 
 urlpatterns += [
     # path('catalog/', include('catalog.urls')),
-    path('../catalog/', include('catalog.urls')),
+    path('catalog/', include('catalog.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
