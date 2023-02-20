@@ -7,21 +7,19 @@ from django.views.generic import RedirectView
 # files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
-# from pantry import urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('pantry/', include('pantry.urls')),
-    path('', RedirectView.as_view(url='pantry/', permanent=True)),
+    path('', RedirectView.as_view(url='foodlist/', permanent=True)),
     path('accounts/', include('django.contrib.auth.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += [
-    path('pantry/', include('pantry.pantry_urls')),
-]
+# urlpatterns += [
+#     path('foodlist/', include('foodlist.local_urls')),
+# ]
 
 
