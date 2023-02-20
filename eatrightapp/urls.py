@@ -21,7 +21,7 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
-    path('pantry/', include('pantry.urls')),
+    path('pantry/', include('pantry.pantry_urls')),
 ]
 
 
