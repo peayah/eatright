@@ -7,15 +7,21 @@ from django.views.generic import RedirectView
 # files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
+from catalog import urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalog/', include('catalog.urls')),
+    # path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
     path('accounts/', include('django.contrib.auth.urls')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    path('catalog/', include('catalog.urls')),
+]
 
 
