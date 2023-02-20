@@ -10,7 +10,7 @@ from django.conf.urls.static import static
 
 
 from django.urls import path
-import catalog.views
+# import catalog.views
 from catalog import views
 # from . import views
 from django.urls import re_path as url
