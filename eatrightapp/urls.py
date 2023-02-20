@@ -19,7 +19,7 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
-    path('foodlist/', include('foodlist.local_urls')),
+    path('', include('foodlist.local_urls')),
 ]
 
 
