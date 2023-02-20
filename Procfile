@@ -1,2 +1,2 @@
-release: python manage.py migrate
-web: gunicorn eatrightapp.wsgi
+	release: python manage.py migrate
+web: gunicorn eatrightapp eatrightapp.wsgi
