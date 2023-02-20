@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_filters',
-    'catalog',
+    'pantry',
 ]
 
 MIDDLEWARE = [
@@ -47,8 +47,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            # BASE_DIR / "catalog/templates"
-            os.path.join(BASE_DIR, 'catalog/templates'),
+            # BASE_DIR / "pantry/templates"
+            os.path.join(BASE_DIR, 'pantry/templates'),
 
             #re-route the search for templates into this custom template directory
             os.path.join(BASE_DIR, 'templates'),
