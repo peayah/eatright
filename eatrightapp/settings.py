@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-53wom$03zjd=sv6!2@=l3n#s1)(0b&nad=w&e%s(#_vfdrnk=@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['pacific-scrubland-47122.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'pacific-scrubland-47122.herokuapp.com']
 
 
 # Application definition
@@ -76,18 +76,18 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'eatrightdb',
-        # 'USER': 'postgres',
-        # 'PASSWORD':'Abigail2',
-        # 'HOST': 'localhost',
-        # 'PORT':'5432',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddv30kg3k5lsrh',
-        'USER': 'tapacygwiearcg',
-        'PASSWORD':'474bfaff34fd5a74c076124d379284960e1a5aef9ba980c0e2eec4d843df4e9e',
-        'HOST': 'ec2-54-157-79-121.compute-1.amazonaws.com',
+        'NAME': 'eatrightdb',
+        'USER': 'postgres',
+        'PASSWORD':'Abigail2',
+        'HOST': 'localhost',
         'PORT':'5432',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'ddv30kg3k5lsrh',
+        # 'USER': 'tapacygwiearcg',
+        # 'PASSWORD':'474bfaff34fd5a74c076124d379284960e1a5aef9ba980c0e2eec4d843df4e9e',
+        # 'HOST': 'ec2-54-157-79-121.compute-1.amazonaws.com',
+        # 'PORT':'5432',
     }
 }
 
