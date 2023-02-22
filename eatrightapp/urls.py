@@ -3,13 +3,14 @@ from django.urls import include, path
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+import catalog
 from catalog.urls import urlpatterns
 
 urlpatterns = [
     path('admin/',
          admin.site.urls),
     path('catalog/',
-         include(urlpatterns)),
+         include(catalog.urls)),
     path('accounts/',
          include('django.contrib.auth.urls')),
     path('',
